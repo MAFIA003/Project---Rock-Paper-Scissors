@@ -1,8 +1,172 @@
-.body{
-    background: black;
+body{
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #ffcf1b,
+        #ff8b1b
+    );
+}
+#container{
+    width: 50%;
+    min-width: 600px;
+    background: linear-gradient(
+        320deg,
+        #f0dd9c,
+        #a8b820
+    );
+    padding: 40px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 h1{
     font-size: 42px;
     font-weight: bold;
     text-align: center;
 }
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 20px;
+    margin-top: 10px;
+}
+/* style specific buttons section */
+#buttons > button {
+    background-color: #f68720;
+    color: aliceblue;
+    border: none;
+    width: 25%;
+    padding: 10px 0px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+/* use css animation on buttons */
+#buttons > button:hover{
+    background-color: chartreuse;
+    color: black;
+}
+#buttons > button::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        0deg,
+        transparent,
+        transparent 30%,
+        rgba(0, 0, 0, 0.3)
+    );
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+#buttons > button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px
+    rgba(0, 0, 0, 0.5);
+}
+#buttons > button:hover::before{
+    opacity: 1;
+    transform: rotate(-45deg)
+    translateY(100%);
+}
+/* style images */
+#images{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#rock-img{
+    width: 25%;
+    height: 25%;
+    border-radius: 25%;
+}
+#paper-img{
+    width: 25%;
+    height: 25%;
+    border-radius: 25%;
+}
+#scissors-img{
+    width: 25%;
+    height: 25%;
+    border-radius: 25%;
+}
+
+/* style result display */
+#display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+p{
+    font-size: 24px;
+    word-spacing: 5px;
+    font-weight: bold;
+    color: darkred;
+}
+#resultText{
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+#score{
+    margin-top: 0;
+}
+
+/*Winner Display*/
+.winner{
+    text-align: center;
+    background-color: #cefdce;
+    color: #689f38;
+    font-size: 20px;
+    border-radius: 10px;
+    width: auto;
+    padding: 10px 15px;
+    margin: 20px auto;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Play Again Button */
+#play-again{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.playAgain{
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+.playAgain:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+/* The Odin Project
+    made by : mahipat makwana
+    completed on : 01/07/2025 */
